@@ -293,11 +293,11 @@ h1 {
       color: $white !important;
     }
   }
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     width: 90%;
     height: auto;
     padding: 25px 15px 25px 15px;
-    margin: 10px 0 10px 0;
+    margin: 10px 0px 10px 0;
     overflow-x: hidden;
     .card__button {
       width: auto;
@@ -318,10 +318,13 @@ h1 {
       font-size: 20px;
     }
   }
-  @media (min-width: 900px) and (max-width: 1190px) {
-    width: 40%;
+  @media (min-width: 769px) and (max-width: 1190px) {
+    max-width: 40%;
     height: auto;
     padding: 20px;
+    &:nth-child(2n+2){
+        margin-right:0
+    }
   }
 }
 .text-semibold {
