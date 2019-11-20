@@ -1,4 +1,4 @@
-const toggleButton = document.getElementById("navitoggle");
+const toggleButton = document.getElementById("navitoggle"); 
 const links = document.getElementById("dropdown-links");
 
 toggleButton.addEventListener("click", () => {
