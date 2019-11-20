@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+$white: #ffffff;
+$grey: #d8d8d8;
+$darkGrey: #656565;
+$gradient-btn-col-to: #00a1e5;
+$gradient-btn-col-from: #007bc7;
+$bg-color: #f2f2f2;
+
+$open-sans: "Open Sans", sans-serif;
+/* var. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  overflow: auto;
+}
+body {
+  margin: 0;
+  font-family: $open-sans;
+  font-weight: 400;
+  font-size: 14px;
+  background: $bg-color;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $darkGrey;
+}
+p {
+  color: $darkGrey;
+}
+h1 {
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* 
+        telefony
+    */
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* navigation */
+#navigation {
+  background: $white;
+  width: 100%;
+  height: 80px;
+  .navigation__toggle-btn {
+    display: none;
+  }
+  .container {
+    height: 100%;
+  }
+  .row-flex {
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    //padding: 10px 0;
+  }
+  .navigation__logo {
+    margin-left: 36px;
+    height: 100%;
+    //margin-top: auto;
+    img {
+      width: 180px;
+      height: 44.5px;
+    }
+  }
+  .navigation__info {
+    margin-right: 36px;
+  }
+  .navigation__links {
+    ul {
+      display: flex;
+      flex-flow: wrap row;
+      li {
+        padding-bottom: 27px;
+        padding-top: 27px;
+        margin-right: 62.5px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      li.active {
+        border-bottom: 3px solid;
+        color: $gradient-btn-col-from;
+        a {
+          color: $gradient-btn-col-from;
+        }
+      }
+    }
+    & a:hover {
+      color: $gradient-btn-col-from;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    min-height: 80px;
+    //margin-bottom: 35px;
+    .row-flex {
+      //justify-content:space-between;
+      padding: 10px 0px;
+    }
+    .navigation__toggle-btn {
+      margin-right: 36px;
+      display: flex;
+      button {
+        font-size: 40px;
+        color: $gradient-btn-col-from;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer
+      }
+      #navitoggle {
+        display: inline;
+      }
+    }
+    .navigation__info,
+    .navigation__links {
+      display: none;
+    }
+    .navigation__links.show {
+      display: flex;
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      background: $white;
+      padding-top: 20px;
+      ul {
+        display: flex;
+        flex-flow: wrap column;
+        &:last-child {
+          margin-bottom: 15px;
+        }
+        li {
+          margin-top: 10px;
+          line-height: 3.3em;
+          padding: 0 0 0 25px;
+          border: 0;
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .navigation__logo{
+        img{
+            max-width:80%;
+        }
+    }
+    .navigation__info.show {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      background: $white;
+      padding: 0 0 0 25px;
+    }
+  }
+}
+
+/* header */
+#header {
+  background: url("../img/slider-img.png") no-repeat center center;
+  background-size: cover;
+  min-height: 360px;
+  .header__content {
+    min-height: 360px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+
+    .header__title {
+      text-transform: uppercase;
+      font-size: 60px;
+      text-align: center;
+      color: $white;
+      margin-bottom: 25px;
+    }
+    .header__text {
+      width: 50%;
+      text-align: center;
+      p {
+        color: $white;
+        line-height: 2em;
+      }
+      //margin:auto;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 768px) {
+    //background: url("../img/mobile-slider.png") no-repeat;
+    .header__content {
+      .header__title {
+        font-size: 30px;
+      }
+      .header__text {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.navigation__info {
+  display: flex;
+  flex-flow: wrap row;
+  img {
+    margin-right: 10px;
+  }
+  ul {
+    &:last-child {
+      font-size: 12px;
+    }
+  }
+}
+/* main content */
+#main {
+  transform: translateY(-50px);
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    transform: translateY(0px);
+    margin-top: 30px;
+  }
+  .row-flex {
+    justify-content: center;
+  }
+  //padding-bottom: 20px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  //align-items: flex-start;
+  width: 560px;
+  height: 340px;
+  padding: 0 35px 0 35px;
+  background: $white;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  &:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+  .card__title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .card__text {
+    line-height: 1.8em;
+  }
+  .card__button {
+    margin-top: 15px;
+    border: 0;
+    background: linear-gradient(
+      to top right,
+      $gradient-btn-col-from,
+      $gradient-btn-col-to
+    );
+    width: 114px;
+    height: 35px;
+    border-radius: 4px;
+    a {
+      color: $white !important;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 90%;
+    height: auto;
+    padding: 25px 15px 25px 15px;
+    margin: 10px 0 10px 0;
+    overflow-x: hidden;
+    .card__button {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      padding: 7px 0 7px 0;
+    }
+    .card__logo{
+        img{
+            max-width:80%
+        }
+    }
+    .card__text{
+        margin-top:20px;
+        margin-bottom:15px;
+    }
+    a {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 900px) and (max-width: 1190px) {
+    width: 40%;
+    height: auto;
+    padding: 20px;
+  }
+}
+.text-semibold {
+  font-weight: 600;
+}
+.text-regular {
+  font-weight: 400;
+}
