@@ -97,7 +97,7 @@ h1 {
 }
 
 #navigation .navigation__logo img {
-  width: 180px;
+  max-width: 180px;
   height: 44.5px;
 }
 
@@ -221,7 +221,7 @@ h1 {
 
 /* header */
 #header {
-  background: url("../img/slider-img.png") no-repeat center center;
+  background: url("/img/slider-img.png") no-repeat center center;
   background-size: cover;
   min-height: 360px;
 }
@@ -246,7 +246,7 @@ h1 {
 
 #header .header__content .header__title {
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 5vw;
   text-align: center;
   color: #ffffff;
   margin-bottom: 25px;
@@ -264,7 +264,7 @@ h1 {
 
 @media (min-width: 320px) and (max-width: 768px) {
   #header .header__content .header__title {
-    font-size: 30px;
+    font-size: 4.5vw;
   }
   #header .header__content .header__text {
     width: 80%;
@@ -300,6 +300,7 @@ h1 {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 

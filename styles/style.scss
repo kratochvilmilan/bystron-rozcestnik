@@ -86,7 +86,7 @@ h1 {
     height: 100%;
     //margin-top: auto;
     img {
-      width: 180px;
+      max-width: 180px;
       height: 44.5px;
     }
   }
@@ -186,7 +186,7 @@ h1 {
 
 /* header */
 #header {
-  background: url("../img/slider-img.png") no-repeat center center;
+  background: url("/img/slider-img.png") no-repeat center center;
   background-size: cover;
   min-height: 360px;
   .header__content {
@@ -199,7 +199,7 @@ h1 {
 
     .header__title {
       text-transform: uppercase;
-      font-size: 60px;
+      font-size: 5vw; //60px
       text-align: center;
       color: $white;
       margin-bottom: 25px;
@@ -218,7 +218,7 @@ h1 {
     //background: url("../img/mobile-slider.png") no-repeat;
     .header__content {
       .header__title {
-        font-size: 30px;
+        font-size: 4.5vw; //30px;
       }
       .header__text {
         width: 80%;
@@ -246,6 +246,7 @@ h1 {
   @media (min-width: 320px) and (max-width: 768px) {
     transform: translateY(0px);
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   .row-flex {
     justify-content: center;
